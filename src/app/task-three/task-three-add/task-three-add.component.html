@@ -1,0 +1,36 @@
+<div class="wrapper">
+    <form [formGroup]="gadgetAddForm">
+        <h2>{{ formTitle }}
+        </h2>
+        <div>
+            <label for="">Name*</label>
+            <input type="text" formControlName="name">
+            <span class="field-error" *ngIf="name?.invalid && name?.touched">This field is required</span>
+        </div>
+        <div>
+            <label for="">Description*</label>
+            <textarea type="textare" rows="12" formControlName="description"></textarea>
+            <span class="field-error" *ngIf="description?.invalid && description?.touched">This field is required</span>
+        </div>
+        <div class="form-group">
+            <div>
+                <label for="">Price*</label>
+                <div class="price-group">
+                    <span>$</span>
+                    <input type="number" formControlName="price" placeholder="Price of the gadget" min="1">
+                </div>
+                <span class="field-error" *ngIf="price?.invalid && price?.touched">This field is required</span>
+
+            </div>
+            <div>
+                <label for="">Image url</label>
+                <input type="text" formControlName="imgUrl">
+                <span class="browse">Browse
+                    images
+                    <a href="https://unsplash.com/s/photos/gadget" target="_blank">here</a></span>
+            </div>
+        </div>
+        <button type="button" class="submit" (click)="onSubmit()" [disabled]="gadgetAddForm.invalid">Submit</button>
+        <button type="button" class="cancel" (click)="onCancel()">Cancel</button>
+    </form>
+</div>

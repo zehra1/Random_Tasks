@@ -1,0 +1,68 @@
+.sidenav {
+  background-color: #f5f7f8;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  z-index: 1;
+  gap: 24px;
+  span {
+    font-size: 30px;
+
+    &.active {
+      color: #57bc9a;
+    }
+  }
+}
+
+.container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1024%26quot%3b)' fill='none'%3e%3cpath d='M893.18 651.92C988.73 651.16 1060.23 564.38 1263.34 556.64 1466.44 548.9 1523.57 326.12 1633.49 315.84' stroke='rgba(132%2c 194%2c 162%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M479.87 613.58C582.63 607.09 548.05 422.95 840.3 414.33 1132.56 405.71 1370.75 171.3 1561.17 167.93' stroke='rgba(132%2c 194%2c 162%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M622.33 617.19C723.63 611.61 692.77 436.17 981.84 428.95 1270.9 421.73 1512.17 202.11 1700.85 199.35' stroke='rgba(132%2c 194%2c 162%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M503.68 637.75C666.38 628.78 789.13 335.86 1081.07 335.38 1373.01 334.9 1510.57 463.4 1658.46 464.18' stroke='rgba(132%2c 194%2c 162%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M562.54 562.42C661.47 544.48 606.95 312.72 864.65 296.93 1122.35 281.14 1307.32 71.16 1468.87 67.33' stroke='rgba(132%2c 194%2c 162%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1024'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+  margin-left: 78px;
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 24px;
+  h1 {
+    text-align: center;
+  }
+}
+
+.expand {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidenav {
+    transition: 0.4s;
+    transform: translateX(-65px);
+  }
+  .expanded {
+    transform: translateX(0px);
+  }
+  .expand {
+    transition: 0.4s;
+    position: fixed;
+    z-index: 2;
+    margin-top: 18px;
+    margin-left: 2px;
+    background: #57bc9a;
+    border-radius: 50%;
+    box-shadow: 2px 2px 6px rgb(209, 209, 209);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 28px;
+    &.expanded {
+      transform: translateX(62px) rotate(180deg);
+    }
+  }
+
+  .container {
+    margin-left: 10px;
+  }
+}

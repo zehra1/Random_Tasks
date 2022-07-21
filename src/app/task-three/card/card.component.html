@@ -1,0 +1,29 @@
+<div class="card">
+    <div>
+        <div class="card__header">
+            <div class="image-wrapper">
+                <img [src]="item.imgUrl || 'https://www.gadgets-weblog.com/wp-content/themes/15zine/library/images/placeholders/placeholder-759x500.png'"
+                    width="100%" alt="">
+            </div>
+            <div>
+                <h2>{{ item.name }}</h2>
+                <span>${{item.price}}</span>
+            </div>
+        </div>
+        <div class="card__body">
+            <p>
+                {{ item.description }}
+            </p>
+            <span (click)="handleDetails()">Read more
+                <span class="material-symbols-outlined">
+                    chevron_right
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <div class="card__actions">
+        <button class="primary" (click)="handleEdit()">Edit</button>
+        <button class="danger" (click)="handleDelete()">Delete</button>
+    </div>
+</div>

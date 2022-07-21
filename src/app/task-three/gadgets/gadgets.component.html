@@ -1,0 +1,6 @@
+<h1>Gadgets</h1>
+<div class="gadgets-list">
+    <ng-container *ngFor="let gadget of gadgets">
+        <app-card [item]="gadget" (clickedGadget)="handleDelete($event)"></app-card>
+    </ng-container>
+</div>

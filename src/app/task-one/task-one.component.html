@@ -1,0 +1,21 @@
+<div class="wrapper">
+
+    <div>
+        <span *ngFor="let item of values">
+            {{ item.value }}
+        </span>
+    </div>
+    <p>
+        Most occurred value is: {{ mostOccurred }}
+    </p>
+
+    <h2>Modified array</h2>
+    <div>
+        <span [ngClass]="{'added': i === modified.length-1}" *ngFor="let item of modified, let i = index">
+            {{ item.value }}
+        </span>
+    </div>
+    <div class="shuffle" (click)="getNext()"><span class="material-symbols-outlined" title="Generate new array">
+            shuffle
+        </span></div>
+</div>

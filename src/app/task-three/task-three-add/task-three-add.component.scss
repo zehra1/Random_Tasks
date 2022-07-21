@@ -1,0 +1,141 @@
+.wrapper {
+  padding: 10px;
+  //   display: flex;
+  justify-content: center;
+  width: 100%;
+
+  small {
+    text-align: right;
+  }
+
+  .alert {
+    position: absolute;
+    right: 0;
+    margin-right: 0px;
+    background-color: rgb(186, 229, 179);
+    color: rgb(8, 110, 8);
+    padding: 8px 24px;
+    border-radius: 8px 0px 0px 8px;
+    box-shadow: 0px 4px 5px rgb(234, 234, 234);
+    border-right: 3px solid rgb(8, 110, 8);
+  }
+}
+form {
+  background-color: #f5f7f8;
+  padding: 24px;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 5px rgb(234, 234, 234);
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .price-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+    }
+
+    div:first-child {
+      width: 30%;
+    }
+
+    div:last-child {
+      width: 60%;
+    }
+  }
+  h2 {
+    color: #535353;
+  }
+  label {
+    padding: 5px;
+    color: #535353;
+  }
+  input,
+  textarea {
+    padding: 12px 16px;
+    border: 1px solid rgb(222, 222, 222);
+  }
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px 24px;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0px 4px 5px rgb(213, 213, 213);
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    &.submit {
+      background-color: #57bc9a;
+      border: 0px;
+    }
+    &.submit:hover {
+      box-shadow: 0px 0px 5px rgb(213, 213, 213);
+      background-color: #57bc9a;
+      border: 0px;
+      cursor: pointer;
+      transform: translateY(3px);
+    }
+
+    &.cancel {
+      background-color: transparent;
+      border: 1px solid red;
+      color: red;
+    }
+    &.cancel:hover {
+      background-color: red;
+      color: white;
+      cursor: pointer;
+    }
+    &:disabled,
+    [disabled] {
+      opacity: 0.5;
+    }
+  }
+  .field-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+.browse {
+  color: rgb(135, 135, 135);
+  text-align: right;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    width: 100%;
+
+    .form-group {
+      flex-direction: column;
+
+      div:first-child {
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+
+      div:last-child {
+        width: 100%;
+      }
+    }
+  }
+}

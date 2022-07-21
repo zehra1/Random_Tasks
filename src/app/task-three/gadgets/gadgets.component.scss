@@ -1,0 +1,13 @@
+.gadgets-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+h1 {
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .gadgets-list {
+    flex-direction: column;
+  }
+}

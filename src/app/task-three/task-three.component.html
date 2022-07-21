@@ -1,0 +1,14 @@
+<span (click)="toggleSidenav()" [ngClass]="{'expanded': isSidenavOpen}" class="material-symbols-outlined expand">
+    chevron_right
+</span>
+<div class="sidenav" [ngClass]="{'expanded': isSidenavOpen}">
+    <span [routerLink]="['/gadgets']" routerLinkActive="active" class="material-symbols-outlined">
+        home
+    </span>
+    <span [routerLink]="['/add']" routerLinkActive="active" class="material-symbols-outlined">
+        add_circle
+    </span>
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div>
+        <div class="container">
+            <div class="image-wrapper">
+                <img [src]="gadget.imgUrl || 'https://www.gadgets-weblog.com/wp-content/themes/15zine/library/images/placeholders/placeholder-759x500.png'"
+                    alt="image of gadget">
+            </div>
+            <div>
+                <h1>{{ gadget.name }}</h1>
+                <span>{{gadget.createdAt | date:'short'}}</span>
+            </div>
+            <p>
+                {{ gadget.description }}
+            </p>
+        </div>
+    </div>
+</div>
